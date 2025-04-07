@@ -1,4 +1,4 @@
-# bcog200final
+# Battleship Game
 1. A brief (3-5 sentences) description of your planned project
   - My project is to recreate the game Sea Battle. I will not be using simple printed outputs,
     but add images so that the players can actually see the image when the ship is correctly hit.

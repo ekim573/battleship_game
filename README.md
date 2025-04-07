@@ -34,5 +34,5 @@ Control game status of player
 * Install pygame
 * In the output, there should be shown a screen with 10x10 grid with a sea background and a scoreboard
 * The ships will be randomly assigned correctly with no overlap or out-of-bounds
-* The game will trackdown hits, misses, and ammos
+* The game will trackdown hits, misses, and ammo
 * The window will close when the game is over

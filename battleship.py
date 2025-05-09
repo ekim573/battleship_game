@@ -4,11 +4,12 @@ from enum import Enum, auto
 import random
 
 SHIP_IMAGE_PATH = {
-    1: "/Users/erinkim/desktop/bcog200/battleship_images/ship1.gif",
-    2: "/Users/erinkim/desktop/bcog200/battleship_images/ship2.gif",
-    3: "/Users/erinkim/desktop/bcog200/battleship_images/ship3.gif",
-    4: "/Users/erinkim/desktop/bcog200/battleship_images/ship4.gif",
+    1: "../battleship_images/ship1.gif",
+    2: "../battleship_images/ship2.gif",
+    3: "../battleship_images/ship3.gif",
+    4: "../battleship_images/ship4.gif",
 }
+# The path for the image files
 
 
 class Grid:
@@ -31,10 +32,10 @@ class Grid:
         self.miss_positions = set()
         self.sunk = []
         self.miss_image_path = pygame.image.load(
-            "/Users/erinkim/desktop/bcog200/battleship_images/miss.gif"
+            "../battleship_images/miss.gif"
         )
         self.hit_image_path = pygame.image.load(
-            "/Users/erinkim/desktop/bcog200/battleship_images/hit.gif"
+            "../battleship_images/hit.gif"
         )
 
     def set_grid(self, score, ammo, ships):
@@ -42,12 +43,12 @@ class Grid:
         self.row_distance = self.grid_screen[0] // self.col
         self.col_height = self.grid_screen[1] // self.col
 
-        grid_image_path = "/Users/erinkim/desktop/bcog200/battleship_images/sea.gif"
+        grid_image_path = "../battleship_images/sea.gif"
         grid_image = pygame.image.load(grid_image_path)
         grid_image = pygame.transform.scale(grid_image, self.grid_screen)
         self.grid.blit(grid_image, (0, 0))
 
-        score_image_path = "/Users/erinkim/desktop/bcog200/battleship_images/scoreboard.gif"
+        score_image_path = "../battleship_images/scoreboard.gif"
         score_image = pygame.image.load(score_image_path)
         score_image = pygame.transform.scale(score_image, self.score_screen)
         self.grid.blit(score_image, (0, 800))
@@ -185,10 +186,10 @@ class Game:
         self.ships = []
         self.occupied = set()
         self.hit_sound = pygame.mixer.Sound(
-            "/Users/erinkim/desktop/bcog200/sound/hit.mp3"
+            "../sound/hit.mp3"
         )
         self.miss_sound = pygame.mixer.Sound(
-            "/Users/erinkim/desktop/bcog200/sound/miss.mp3"
+            "../sound/miss.mp3"
         )
 
         for size in [4, 4, 3, 3, 2, 2, 1, 1]:
@@ -202,10 +203,10 @@ class Game:
         When the start button is pressed, the game starts and moves onto the game screen
         """
 
-        start_screen_image = pygame.image.load("/Users/erinkim/desktop/bcog200/battleship_images/start_screen.gif")
+        start_screen_image = pygame.image.load("../battleship_images/start_screen.gif")
         start_screen_image = pygame.transform.scale(start_screen_image, (800,900))
 
-        example_image = pygame.image.load("/Users/erinkim/desktop/bcog200/battleship_images/example.gif")
+        example_image = pygame.image.load("/../battleship_images/example.gif")
         example_image = pygame.transform.scale(example_image, (250,300))
 
         font_instruction = pygame.font.SysFont("Arial", 20)
@@ -330,7 +331,7 @@ class Game:
         """
         self.status = GameState.GAME_OVER
 
-        game_over_image_path = "/Users/erinkim/desktop/bcog200/battleship_images/game_over.gif"
+        game_over_image_path = "../game_over.gif"
         game_over_image = pygame.image.load(game_over_image_path)
         game_over_image = pygame.transform.scale(game_over_image, (800, 900))
         self.grid.grid.blit(game_over_image, (0, 0))

@@ -60,6 +60,7 @@ Control overall game status and play
 ## Testing
 * Install pygame
 * Download battleship_images and sound file
+* Change file path according to your file path of where battleship_images and sound file is located
 * Start of the game, there should be a start screen with information about the game and a start button
 * After pressing the start button, a screen with 10x10 grid with a sea background and a scoreboard will appear
 * The ships will be randomly assigned correctly with no overlap or out-of-bounds

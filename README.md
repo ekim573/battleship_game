@@ -18,6 +18,7 @@ Create visual game display on screen
 Set random placement and legality of the locations of ships and display
 * placement(occupied)
   * Assign random areas on grid for ships
+  * Place ships horizontally or vertically (random)
 * is_sunk()
   * Check if all parts of the ship are hit
 * legal_position(position1, occupied)
@@ -27,15 +28,17 @@ Set random placement and legality of the locations of ships and display
 
 ### Player
 Tracks the player's game state and numbers
-* hit
-* miss
-* score
-* ammo
+* hit: number of success hits, starts at 0
+* miss: number of misses, starts at 0
+* score: total points, starts at 0
+* ammo: number of chances left, starts at 50
 
 ### GameState
 Define status of the game
-* RUNNING: Game is active
-* GAME_OVER: Game ended
+* RUNNING = auto()
+  * Game is active
+* GAME_OVER = auto()
+  * Game ended
 
 ### Game
 Control overall game status and play
@@ -49,17 +52,18 @@ Control overall game status and play
   * Start the game
   * Using the mouse, the player will choose certain grids on the screen
   * Track down which grids are chosen
-  * If miss, add the miss_image with miss_sound
-  * If hit, add the hit_image and hit_sound
+  * Miss: miss_image, miss_sound
+  * Hit: hit_image, hit_sound, +1 points
+  * If ship is sunk: ship image appears, +5 points
   * When ammo=0, change game status to end
 * end()
   * End the game by updating game state
-  * When the ends, the screen will move to the game over sreen
+  * When the ends, the screen will display to game over screen
   * Show the total score
-  * The game will exit automatically
+  * The game will quit automatically
 
 ## Testing
-* Install pygame
+* Install pygame (pip install pygame)
 * Download battleship_images and sound file
 * Change file path according to your file path of where battleship_images and sound file is located
 * Start of the game, there should be a start screen with information about the game and a start button

@@ -66,7 +66,7 @@ Control overall game status and play
 * The ships will be randomly assigned correctly with no overlap or out-of-bounds
 * The game will trackdown hits, misses, and ammo
 * Miss: x image with a miss sound
-* Hit: hit sound, and when all the area of the ship is hit, the ship will appear
+* Hit: explosion image with hit sound, and when all places are hit, ship will appear
 * The score will increase with all hits and ammo will decrease with every choices made
 * When ammo reaches 0, the game over screen will appear with the total score shown
 * The game will end automatically from the game over screen

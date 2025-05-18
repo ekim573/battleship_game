@@ -34,7 +34,7 @@ class Grid:
             "../battleship_images/miss.gif"
         )
         self.hit_image_path = pygame.image.load(
-            "../bcog200/battleship_images/hit.gif"
+            "../battleship_images/hit.gif"
         )
 
 

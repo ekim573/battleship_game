@@ -21,7 +21,7 @@ Set random placement and legality of the locations of ships and display
   * Place ships horizontally or vertically (random)
 * is_sunk()
   * Check if all parts of the ship are hit
-* legal_position(position1, occupied)
+* legal_position(new_position, occupied)
   * Check if there is an overlap or the ship is out-of-bound
 * load_image()
   * Load the ship image from battlehsip_images
@@ -65,7 +65,7 @@ Control overall game status and play
 ## Testing
 * Install pygame (pip install pygame)
 * Download battleship_images and sound file
-* Change file path according to your file path of where battleship_images and sound file is located
+* Change file paths according to your file path of where battleship_images and sound file is located
 * Start of the game, there should be a start screen with information about the game and a start button
 * After pressing the start button, a screen with 10x10 grid with a sea background and a scoreboard will appear
 * The ships will be randomly assigned correctly with no overlap or out-of-bounds

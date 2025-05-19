@@ -15,7 +15,7 @@ SHIP_IMAGE_PATH = {
 class Grid:
     """   
     Manages visual display of background picture, grid lines, and score board.
-    Controls the palcment of hit, miss, and ship images.
+    Controls the placement of hit, miss, and ship images.
     """
 
     screen_size = (800, 900)

@@ -118,7 +118,7 @@ class Ship:
         self.ship_image = None
 
     def is_sunk(self):
-        """ Check if all parts of the ship is hit. """
+        """ Check if all parts of the ship are hit. """
         return set(self.ship_position) == self.hit
 
     def placement(self, occupied):

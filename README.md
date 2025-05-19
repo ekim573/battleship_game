@@ -29,7 +29,7 @@ Set random placement and legality of the locations of ships and display
 ### Player
 Tracks the player's game state and numbers
 * hit: number of success hits, starts at 0
-* miss: number of misses, starts at 0
+* miss: number of misses
 * score: total points, starts at 0
 * ammo: number of chances left, starts at 50
 

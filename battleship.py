@@ -61,7 +61,7 @@ class Grid:
         self.grid.blit(grid_image, (0, 0))
 
         # Score board image
-        score_image_path = "../bcog200/battleship_images/scoreboard.gif"
+        score_image_path = "../battleship_images/scoreboard.gif"
         score_image = pygame.image.load(score_image_path)
         score_image = pygame.transform.scale(score_image, self.score_screen)
         self.grid.blit(score_image, (0, 800))
